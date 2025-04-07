@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string menu[] = { "액션 DVD", "코미디 DVD", "드라마 DVD", "SF DVD", "애니메이션 DVD" };
+    int prices[] = { 12000, 15000, 11000, 17000, 13000 };
+
+    while (1) {
+        cout << "DVD 종류 선택" << endl;
+        for (int i = 0; i < 5; i++) {
+            cout << i + 1 << ". " << menu[i] << " - " << prices[i] << "원" << endl;
+        }
+
+        int sel;
+        cout << "번호 입력 (종료는 0): ";
+        cin >> sel;
+
+        if (sel == 0) {
+            break;
+        }
+
+        if (sel < 1 || sel > 5) {
+            cout << "잘못된 번호입니다." << endl;
+            continue;
+        }
+
+        char ans;
+        cout << "구매하시겠습니까? (Y/N): ";
+        cin >> ans;
+
+        if (ans == 'N' || ans == 'n') {
+            cout << "다시 메뉴로 돌아갑니다." << endl;
+            continue;
+        }
+
+        int cnt;
+        cout << "개수 입력: ";
+        cin >> cnt;
+
+        int total = prices[sel - 1] * cnt;
+        cout << menu[sel - 1] << " " << cnt << "개 구매, 가격은 " << total << "원입니다." << endl << endl;
+    }
+
+    cout << "종료합니다." << endl;
+    return 0;
+}
