@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo "숫자 3개를 입력하세요."
+read num1 num2 num3
+
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]; then
+  echo "$num1이 가장 큽니다."
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]; then
+  echo "$num2이 가장 큽니다."
+else
+  echo "$num3이 가장 큽니다."
+fi
+
+for (( i=1; i<=5; i++ ))
+do
+  echo "반복 $i"
+done
+
+count=1
+while [ $count -le 3 ]
+do
+  echo "while 반복 $count"
+  ((count++))
+done
+
+case $num1 in
+  1)
+    echo "1번을 선택했습니다."
+    ;;
+  2)
+    echo "2번을 선택했습니다."
+    ;;
+  3)
+    echo "3번을 선택했습니다."
+    ;;
+  *)
+    echo "그 외의 값을 선택했습니다."
+    ;;
+esac
