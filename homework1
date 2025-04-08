@@ -1,0 +1,11 @@
+#!/bin/bash
+mkdir ~/swing33
+cd ~/swing33
+mkdir $1
+cd $1
+date > $2
+ls - >> $2
+cp $2 ../
+cd ..
+mv $2 $3
+ls -l
