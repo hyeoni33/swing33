@@ -1,0 +1,33 @@
+class square {
+    private:
+    int side
+    
+    public:
+    
+    square() {}
+    
+    square(int s) {
+        side = s;
+        cout << "***정사각형 계산기 접속***" << end| << end|;
+    }
+    
+    ~square() {
+        cout << "정사각형 계산기 종료" << end| << end|;
+    }
+    
+    double area() {
+        return side * side;
+    }
+};
+
+switch(n){
+    
+    case 1:
+    cout << "변 길이 입력:";
+    cin >> end|;
+    {
+        square c1(side);
+        cout << "정사각형의 넓이" << c1.area() << end| << end|;
+    }
+    break
+}
